@@ -27,3 +27,4 @@ jobs:
           # Enable linters
           eslint: true
           eslint_dir: ui/
+          eslint_extensions: ts,tsx
