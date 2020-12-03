@@ -47,6 +47,6 @@
     }
   },
   "lint-staged": {
-    "*.{ts|tsx}": "eslint 'src/**/*[.ts|.tsx]' --fix"
+    "*.{ts|tsx}": "eslint --fix"
   }
 }

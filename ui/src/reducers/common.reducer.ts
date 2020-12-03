@@ -4,6 +4,7 @@ export interface ICommonReducer {
   isLogged: boolean
 }
 
+
 const defaultSate: ICommonReducer = {
   isLogged: false
 }
