@@ -4,8 +4,9 @@ export interface ICommonReducer {
   isLogged: boolean
 }
 
+
 const defaultSate: ICommonReducer = {
-  isLogged: false
+  isLogged: false,
 }
 
 export const commonReducer = (state: ICommonReducer = defaultSate, action: Action<any>): ICommonReducer => {
