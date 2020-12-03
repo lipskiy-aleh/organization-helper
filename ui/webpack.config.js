@@ -2,10 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const MODE = process.ENV === 'production' ? 'production' : 'development'
+
 module.exports = {
+  mode: MODE,
   entry: './src/index.tsx',
   target: 'web',
-  mode: 'development',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
@@ -41,5 +43,6 @@ module.exports = {
     hot: true,
     port: 8080,
     inline: true,
+    historyApiFallback: true,
   }
 };
