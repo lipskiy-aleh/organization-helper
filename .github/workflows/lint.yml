@@ -28,3 +28,4 @@ jobs:
           eslint: true
           eslint_dir: ui/
           eslint_extensions: ts,tsx
+          continue_on_error: false
