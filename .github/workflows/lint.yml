@@ -1,6 +1,6 @@
 name: Lint
 
-on: pull-request
+on: pull_request
 
 jobs:
   run-linters:
@@ -28,4 +28,3 @@ jobs:
           eslint: true
           eslint_dir: ui/
           eslint_extensions: ts,tsx
-          auto_fix: true
