@@ -12,5 +12,5 @@ const composeEnhancers =
 export const store = createStore(rootReducer, composeEnhancers(
   applyMiddleware(
     sagaMiddleware,
-  )
+  ),
 ))
