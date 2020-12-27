@@ -10,10 +10,22 @@ module.exports = {
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
+    filename: 'bundle.[hash].js',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
+    alias: {
+      'app-constants': path.resolve(__dirname, 'src/constants'),
+      'app-history': path.resolve(__dirname, 'src/history'),
+      'components': path.resolve(__dirname, 'src/components'),
+      'selectors': path.resolve(__dirname, 'src/selectors'),
+      'store': path.resolve(__dirname, 'src/store'),
+      'actions': path.resolve(__dirname, 'src/actions'),
+      'reducers': path.resolve(__dirname, 'src/reducers'),
+      'sagas': path.resolve(__dirname, 'src/sagas'),
+      'modules': path.resolve(__dirname, 'src/modules'),
+    },
   },
   module: {
     rules: [
@@ -27,8 +39,8 @@ module.exports = {
         loader: 'source-map-loader',
       },
       {
-          test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },
@@ -39,10 +51,11 @@ module.exports = {
     new MiniCssExtractPlugin(),
   ],
 
+  devtool: 'inline-source-map',
   devServer: {
     hot: true,
     port: 8080,
     inline: true,
     historyApiFallback: true,
-  }
-};
+  },
+}
