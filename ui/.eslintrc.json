@@ -21,12 +21,13 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "indent": ["error", 2],
+        "indent": ["error", 2, { "SwitchCase": 1 }],
         "linebreak-style": ["error", "unix"],
         "eol-last": ["error", "always"],
         "quotes": ["error", "single"],
         "semi": ["error", "never"],
         "comma-dangle": ["error", "always-multiline"],
+        "react/prop-types": 0,
         "@typescript-eslint/explicit-module-boundary-types": 2
     }
 }

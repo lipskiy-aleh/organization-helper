@@ -1,25 +1,29 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import {
-  BrowserRouter as Router,
+  Router,
+  Switch,
   Route,
-  Link,
+  Redirect,
 } from 'react-router-dom'
-import { Button } from 'antd'
-import { store } from '../store'
+import { store } from 'store'
+import { LoginPg } from './LoginPg'
+import { PrivateRoute } from './PrivateRoute'
+import { history } from 'app-history'
+import { Vacations } from 'modules/vacations'
+import { BASE_ROUTES, DEFAULT_ROUTE } from 'app-constants'
 
 import 'antd/dist/antd.css'
 
 const App: React.FC = () => (
   <Provider store={store}>
-    <Router>
-      <div> Hello my first data in react app </div>
-      <Button type="primary">Button</Button>
-      <Link to="/about">About</Link>
+    <Router history={history}>
+      <Switch>
+        <Route path="/" exact render={() => <Redirect to={DEFAULT_ROUTE} />} />
+        <Route path={BASE_ROUTES.LOGIN} component={LoginPg}/>
 
-      <Route path="/about">
-        Hello world
-      </Route>
+        <PrivateRoute path={BASE_ROUTES.VACATIONS} component={Vacations} />
+      </Switch>
     </Router>
   </Provider>
 )

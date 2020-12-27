@@ -21,5 +21,16 @@
   },
   "include": [
     "src/index.tsx"
-  ]
+  ],
+  "paths": {
+    "app-history": ["src/history"],
+    "store": ["src/store"],
+    "app-constants": ["src/constants"],
+    "components/*": ["src/components/*"],
+    "selectors/*": ["src/selectors/*"],
+    "actions/*": ["src/actions/*"],
+    "reducers/*": ["src/reducers/*"],
+    "sagas/*": ["src/sagas/*"],
+    "modules/*": ["src/modules/*"],
+  }
 }
