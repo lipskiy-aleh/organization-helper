@@ -1,5 +1,7 @@
 # UI part of application
 
+## [Project Structure and Idea Overview (RU)](https://drive.google.com/file/d/1UoLYWOrUMdf57RiN-l1K6oapAGIH-NFp/view?usp=sharing)
+
 ## Based on
 * [TypeScript](https://www.typescriptlang.org/)
   * [tsconfig documentation](https://www.typescriptlang.org/tsconfig)
