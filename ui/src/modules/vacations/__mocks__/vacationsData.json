@@ -1,0 +1,34 @@
+{
+  "regularVacation": {
+    "usedHours": 121,
+    "totalHours": 158
+  },
+  "sickVacation": {
+    "usedHours": 8,
+    "totalHours": 56
+  },
+  "history": [{
+    "requestType": 1,
+    "reason": "Yearly paid time off",
+    "status": 1,
+    "startDate": "2021-01-21T00:00:00.000Z",
+    "endDate": "2021-01-21T00:00:00.000Z",
+    "approver": "Test user"
+  },
+  {
+    "requestType": 1,
+    "reason": "Yearly paid time off",
+    "status": 2,
+    "startDate": "2021-01-21T00:00:00.000Z",
+    "endDate": "2021-01-21T00:00:00.000Z",
+    "approver": "Test user"
+  },
+  {
+    "requestType": 2,
+    "reason": "Feel bad",
+    "status": 1,
+    "startDate": "2021-01-21T00:00:00.000Z",
+    "endDate": "2021-01-21T00:00:00.000Z",
+    "approver": "Test user"
+  }]
+}
