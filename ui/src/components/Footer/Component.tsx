@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyledFooter } from './styles'
 
-interface IProps {
+/*interface IProps {
     content: string
-}
+}*/
 
-export const Footer:React.FC<IProps> = ({content}) => {
-  return <StyledFooter>{content}</StyledFooter>
+export const Footer:React.FC = (props) => {
+  return <StyledFooter>{props.children}</StyledFooter>
 }

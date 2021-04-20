@@ -1,0 +1,1 @@
+export { ApprovedButton } from './Component'
