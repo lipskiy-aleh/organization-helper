@@ -20,7 +20,7 @@
       | - components
         | - Comp1.tsx
         | - Comp2
-          | - Component.tsx  
+          | - InProgress.tsx  
           | - Container.ts  
           | - styles.ts  
           | - index.ts  
@@ -30,7 +30,7 @@
         | - selects.ts
       | - services
         | - Service1.service.ts
-      | - Container.tsx
+      | - Container.ts
       | - types.ts
       | - index.ts
     ```
@@ -136,7 +136,7 @@
     ```
   
 * **file or folder?**
-  * If your cmp doesn\`t have some of additional files(styles or Container). You must use file `Component.tsx`
+  * If your cmp doesn\`t have some of additional files(styles or Container). You must use file `InProgress.tsx`
   * else. You ,ust use folder with name like your cmp (*First capital*) `Component`
     !!! And import from folder component and component props interface !!!
 

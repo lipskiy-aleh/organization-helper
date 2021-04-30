@@ -1,27 +1,33 @@
-import React from 'react'
+﻿import React from 'react'
 import { Avatar, Dropdown, Menu } from 'antd'
-import { UserOutlined } from '@ant-design/icons'
+import { UserOutlined, SettingOutlined, ExportOutlined } from '@ant-design/icons'
 
 const menu = (
   <Menu>
-    <Menu.Item>
+    <Menu.Item icon={<UserOutlined />}>
       <a href="#">My account</a>
     </Menu.Item>
-    <Menu.Item>
+    <Menu.Item icon={<SettingOutlined />}>
       <a href="#">Settings</a>
     </Menu.Item>
     <Menu.Divider />
-    <Menu.Item>
+    <Menu.Item icon={<ExportOutlined />}>
       <a href="#">Logout</a>
     </Menu.Item>
   </Menu>
 )
 
-export const CurrentUser:React.FC = () => {
+export interface IUserPhotoProps{
+    userPhoto: string
+}
+
+export const CurrentUser:React.FC<IUserPhotoProps> = ({ userPhoto }) => {
   return (
     <div>
       <Dropdown overlay={menu} placement="bottomRight" arrow>
-        <Avatar size={40} style={{cursor: 'pointer'}} icon={<UserOutlined />} />
+        { userPhoto
+          ? <Avatar size={40} style={{cursor: 'pointer'}} src={userPhoto}/>
+          : <Avatar size={40} style={{cursor: 'pointer'}} icon={<UserOutlined />} />}
       </Dropdown>
     </div>
   )

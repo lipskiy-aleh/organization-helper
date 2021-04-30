@@ -1,1 +1,0 @@
-export { ClosedButton } from './Component'

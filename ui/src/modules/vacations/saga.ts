@@ -8,7 +8,6 @@ function* getVacationsData() {
   const data: BackEndVacationsDataModel = yield call(() => new Promise((res) => {
     setTimeout((): void => res(vacationsMock),1000)
   }))
-
   yield put(setVacationsData(data))
 }
 

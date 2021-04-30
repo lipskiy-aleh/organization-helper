@@ -1,1 +1,1 @@
-export { CurrentUser } from './Component'
+export { CurrentUserContainer } from './Container'

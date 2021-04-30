@@ -20,6 +20,7 @@ export const RegularVacation: React.FC<VacationHistoryItemModel> = (props) => {
 
       <div>{dataFormatter(props.startDate)} - {dataFormatter(props.endDate)}</div>
       <Approver />
+
       <Setting/>
     </>
   )

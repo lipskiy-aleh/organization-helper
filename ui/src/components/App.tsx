@@ -25,9 +25,9 @@ const App: React.FC = () => (
   <Provider store={store}>
     <Router history={history}>
       <StyledLayout>
-        <Header routers={routers} />
+        <Header />
 
-        <Content style={{padding: '0 50px'}}>
+        <Content style={{padding: '20px 50px 0'}}>
           <Switch>
             {routers.map(({path, isExact= false, component}) => (
               <Route key={path} path={path} exact={isExact} component={component} />
@@ -38,7 +38,7 @@ const App: React.FC = () => (
           </Switch>
         </Content>
 
-        <Footer content='Footer'/>
+        <Footer>Footer</Footer>
       </StyledLayout>
     </Router>
   </Provider>

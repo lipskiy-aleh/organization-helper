@@ -1,1 +1,0 @@
-export { ApprovedButton } from './Component'

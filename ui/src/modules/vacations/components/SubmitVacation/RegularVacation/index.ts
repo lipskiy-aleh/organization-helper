@@ -1,0 +1,1 @@
+export { RegularVacationConnected } from './Container'

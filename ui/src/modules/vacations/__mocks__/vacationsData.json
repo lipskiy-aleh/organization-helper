@@ -7,28 +7,36 @@
     "usedHours": 8,
     "totalHours": 56
   },
+  "otherVacations": {
+    "overtimeHours": 48,
+    "withoutPayHours": 0,
+    "exceptionalHours": 0
+  },
   "history": [{
-    "requestType": 1,
+    "type": "regular",
+    "status": "approved",
     "reason": "Yearly paid time off",
-    "status": 1,
     "startDate": "2021-01-21T00:00:00.000Z",
     "endDate": "2021-01-21T00:00:00.000Z",
-    "approver": "Test user"
+    "approvedBy": "Test user",
+    "approveDate": null
   },
   {
-    "requestType": 1,
+    "type": "regular",
+    "status": "canceled",
     "reason": "Yearly paid time off",
-    "status": 2,
     "startDate": "2021-01-21T00:00:00.000Z",
     "endDate": "2021-01-21T00:00:00.000Z",
-    "approver": "Test user"
+    "approvedBy": "Test user",
+    "approveDate": null
   },
   {
-    "requestType": 2,
+    "type": "sick",
+    "status": "approved",
     "reason": "Feel bad",
-    "status": 1,
     "startDate": "2021-01-21T00:00:00.000Z",
     "endDate": "2021-01-21T00:00:00.000Z",
-    "approver": "Test user"
+    "approvedBy": "Test user",
+    "approveDate": null
   }]
 }

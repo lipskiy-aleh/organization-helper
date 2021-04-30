@@ -1,6 +1,7 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const MODE = process.ENV === 'production' ? 'production' : 'development'
 
@@ -25,6 +26,7 @@ module.exports = {
       'reducers': path.resolve(__dirname, 'src/reducers'),
       'sagas': path.resolve(__dirname, 'src/sagas'),
       'modules': path.resolve(__dirname, 'src/modules'),
+      'utils': path.resolve(__dirname, 'src/utils'),
     },
   },
   module: {

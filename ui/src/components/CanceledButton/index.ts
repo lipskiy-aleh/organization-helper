@@ -1,1 +1,0 @@
-export { CanceledButton } from './Component'
