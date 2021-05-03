@@ -1,1 +1,1 @@
-export { RegularVacationConnected } from './Container'
+export { RegularVacation } from './Container'

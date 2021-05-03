@@ -1,5 +1,5 @@
-﻿import {connect} from 'react-redux'
-import {Balance, IRegularVacationProps} from './Component'
+﻿import { connect } from 'react-redux'
+import { BalanceCmp, IRegularVacationProps } from './Component'
 import { getRegularVacation, getSickVacation, getOtherVacation } from 'modules/vacations/selectors'
 import { IRootState } from 'store'
 
@@ -9,4 +9,4 @@ const mapStateToProps = (state: IRootState): IRegularVacationProps => ({
   otherVacations: getOtherVacation(state),
 })
 
-export const BalanceContainer = connect(mapStateToProps)(Balance)
+export const Balance = connect(mapStateToProps)(BalanceCmp)

@@ -1,12 +1,12 @@
-import * as React from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { NavigationRequestsConnecting } from './NavigationRequests'
-import { TableRequestsConnecting } from './TableRequests'
+import { NavigationRequests } from './NavigationRequests'
+import { TableRequests } from './TableRequests'
 
 import { StyledRequests } from './styled'
 
 export const MyRequests: React.FC = () => {
-
+  
   return (
     <div style={{padding: '20px'}}>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
@@ -15,9 +15,9 @@ export const MyRequests: React.FC = () => {
       </div>
 
       <StyledRequests>
-        <NavigationRequestsConnecting />
+        <NavigationRequests />
 
-        <TableRequestsConnecting />
+        <TableRequests />
       </StyledRequests>
     </div>
   )

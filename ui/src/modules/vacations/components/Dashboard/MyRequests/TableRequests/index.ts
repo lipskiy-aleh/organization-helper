@@ -1,1 +1,1 @@
-export { TableRequestsConnecting } from './Container'
+export { TableRequests } from './Container'

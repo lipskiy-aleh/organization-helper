@@ -10,7 +10,7 @@ export interface IRegularVacationProps{
     otherVacations: OtherVacationsModel
 }
 
-export const Balance: React.FC<IRegularVacationProps> = (props) => {
+export const BalanceCmp: React.FC<IRegularVacationProps> = (props) => {
   const regularVacation = changeHoursVacations(props.regularVacation.totalHours - props.regularVacation.usedHours)
   const regularVacationTotal = changeHoursVacations(props.regularVacation.totalHours)
   const sickVacation = changeHoursVacations(props.sickVacation.totalHours - props.sickVacation.usedHours)

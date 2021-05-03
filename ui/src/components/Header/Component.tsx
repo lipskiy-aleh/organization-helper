@@ -1,11 +1,11 @@
 ﻿import React, {useEffect} from 'react'
 import { Logo } from './Logo'
 import { StyledHeader } from './styles'
-import { CurrentUserContainer } from './CurrentUser'
+import { CurrentUser } from './CurrentUser'
 import { HeaderMenu } from './Menu'
-import {useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { fetchUser } from 'actions/user.actions'
-import {fetchManager} from 'actions/manager.actions'
+import { fetchManager } from 'actions/manager.actions'
 
 export const Header: React.FC = () => {
   const dispatch = useDispatch()
@@ -19,11 +19,9 @@ export const Header: React.FC = () => {
     <StyledHeader>
       <div style={{display: 'flex'}}>
         <Logo/>
-
-        <HeaderMenu/>
+        <HeaderMenu />
       </div>
-
-      <CurrentUserContainer/>
+      <CurrentUser />
     </StyledHeader>
   )
 }

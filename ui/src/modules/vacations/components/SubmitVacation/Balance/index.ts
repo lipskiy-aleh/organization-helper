@@ -1,1 +1,1 @@
-export { BalanceContainer } from './Container'
+export { Balance } from './Container'

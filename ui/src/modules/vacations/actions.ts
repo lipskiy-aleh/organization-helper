@@ -7,6 +7,7 @@ const MODULE_NAME = 'VACATIONS'
 export const FETCH_VACATIONS = `${MODULE_NAME}:FETCH_VACATIONS`
 export const SET_VACATIONS_DATA = `${MODULE_NAME}:SET_VACATIONS_DATA`
 export const ADD_REQUEST = `${MODULE_NAME}:ADD_REQUEST`
+export const ADD_DURATION = `${MODULE_NAME}:ADD_DURATION`
 
 export const fetchVacations = ():AnyAction => ({
   type: FETCH_VACATIONS,
@@ -20,4 +21,9 @@ export const setVacationsData = (data: BackEndVacationsDataModel):AnyAction => (
 export const addRequest = (data: VacationHistoryItemModel): AnyAction => ({
   type: ADD_REQUEST,
   payload: data,
+})
+
+export const addDuration = (value: number): AnyAction => ({
+  type: ADD_DURATION,
+  duration: value,
 })

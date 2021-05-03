@@ -1,4 +1,4 @@
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import { IRootState } from 'store'
 import { ApproverCmp, IApproverProps } from './Component'
 import { getManagerData } from 'selectors/manager'

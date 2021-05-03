@@ -10,3 +10,5 @@ export const getSickVacation = (state: IRootState): VacationInfoModel => state.v
 export const getOtherVacation = (state: IRootState): OtherVacationsModel => state.vacations.otherVacations
 
 export const getHistoryVacation = (state: IRootState): VacationHistoryItemModel[] => state.vacations.history
+
+export const getDuration = (state: IRootState): number => state.vacations.duration

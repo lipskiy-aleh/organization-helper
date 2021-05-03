@@ -1,10 +1,10 @@
 import React from 'react'
-
 import { InfoCircleOutlined } from '@ant-design/icons'
 import { Tooltip } from 'antd'
 import { StyledCard,
   StyledCardHeader,
-  StyledCardProgress } from './styled'
+  StyledCardProgress,
+} from './styled'
 
 interface ICardProps {
     title: string

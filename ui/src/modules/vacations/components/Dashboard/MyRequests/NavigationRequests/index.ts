@@ -1,1 +1,1 @@
-export { NavigationRequestsConnecting } from './Container'
+export { NavigationRequests } from './Container'

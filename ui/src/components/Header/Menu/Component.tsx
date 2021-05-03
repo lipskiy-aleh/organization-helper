@@ -26,8 +26,7 @@ export const HeaderMenu: React.FC = () => {
     <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
       <Menu.Item key={1}>
         <Dropdown overlay={menu} placement="bottomCenter"
-          overlayStyle={{paddingTop: '15px'}}>
-
+          overlayStyle={{minWidth: '110px'}}>
           <Link to='/vacations'>Vacation <DownOutlined style={{margin: '0'}}/></Link>
         </Dropdown>
       </Menu.Item>

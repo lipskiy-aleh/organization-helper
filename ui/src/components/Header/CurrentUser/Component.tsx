@@ -21,7 +21,7 @@ export interface IUserPhotoProps{
     userPhoto: string
 }
 
-export const CurrentUser:React.FC<IUserPhotoProps> = ({ userPhoto }) => {
+export const CurrentUserCmp:React.FC<IUserPhotoProps> = ({ userPhoto }) => {
   return (
     <div>
       <Dropdown overlay={menu} placement="bottomRight" arrow>

@@ -6,7 +6,7 @@ export interface INavigationRequestsProps {
     history: VacationHistoryItemModel[]
 }
 
-export const NavigationRequests: React.FC<INavigationRequestsProps> = ({history}) => {
+export const NavigationRequestsCmp: React.FC<INavigationRequestsProps> = ({history}) => {
   const regular = history.filter(request => request.type === 'regular').length
   const sick = history.filter(request => request.type === 'sick').length
 

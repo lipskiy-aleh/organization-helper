@@ -1,6 +1,6 @@
 import React from 'react'
 import { RegularVacation } from './RegularVacation'
-import {SickLeave} from './SickLeave'
+import { SickLeave } from './SickLeave'
 import { VacationHistoryItemModel, REQUEST_TYPE } from 'modules/vacations/models/vacationHistoryItem.model'
 import { StylesTable } from './styles'
 
@@ -8,7 +8,7 @@ export interface ITableRequestsProps {
     history: VacationHistoryItemModel[]
 }
 
-export const TableRequests: React.FC<ITableRequestsProps> = ({history}) => {
+export const TableRequestsCmp: React.FC<ITableRequestsProps> = ({history}) => {
   return (
     <StylesTable>
       <h4>REQUEST TYPE</h4>

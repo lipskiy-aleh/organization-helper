@@ -7,17 +7,19 @@ import { StyledItem,
   StyledManager,
 } from './styles'
 import { Checkbox, Button, Form, message, Tooltip, Avatar } from 'antd'
-import { REQUEST_TYPE, STATUS, VacationHistoryItemModel } from '../../../models/vacationHistoryItem.model'
-import { ManagerDataModel } from '../../../models/managerData.model'
+import { REQUEST_TYPE, STATUS, VacationHistoryItemModel } from 'modules/vacations/models/vacationHistoryItem.model'
+import { ManagerDataModel } from 'modules/vacations/models/managerData.model'
 
 export interface IRegularVacationProps {
     userName: string,
     userSurname: string,
     manager: ManagerDataModel,
+    duration: number,
     addRequest?: (data: VacationHistoryItemModel) => void,
 }
 
-export const RegularVacation: React.FC<IRegularVacationProps> = (props) => {
+export const RegularVacationCmp: React.FC<IRegularVacationProps> = (props) => {
+  const [sendRegularVacation] = Form.useForm()
 
   const onFinish = (values: any) => {
     const data: VacationHistoryItemModel = {
@@ -33,12 +35,12 @@ export const RegularVacation: React.FC<IRegularVacationProps> = (props) => {
     message.success('Your regular vacation has been added!')
     console.log(values)
     sendRegularVacation.resetFields()
-  }
 
+  }
   const onFinishFailed = () => {
     message.error('Oops! Something went wrong!')
   }
-  const [sendRegularVacation] = Form.useForm()
+
   return(
     <StyledWrapper form={sendRegularVacation}
       initialValues={{ informed: true }}
@@ -64,12 +66,13 @@ export const RegularVacation: React.FC<IRegularVacationProps> = (props) => {
 
       <StyledItem>
         <h3>Period</h3>
-        <Period />
+        <Period {...props.duration}/>
       </StyledItem>
 
       <StyledItem>
         <h3>Duration</h3>
-        <div>{4}d</div>
+        <div>{props.duration ? props.duration + 'd'
+          : <i style={{color: '#1890ff'}}>Select period!</i>}</div>
       </StyledItem>
 
       <Form.Item name="informed" valuePropName="checked">
