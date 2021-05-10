@@ -32,5 +32,6 @@
     "reducers/*": ["src/reducers/*"],
     "sagas/*": ["src/sagas/*"],
     "modules/*": ["src/modules/*"],
+    "utils/*": ["src/utils/*"]
   }
 }

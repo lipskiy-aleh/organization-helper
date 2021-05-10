@@ -1,0 +1,1 @@
+export { MenuSubmit } from './Component'

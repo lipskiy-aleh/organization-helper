@@ -1,0 +1,1 @@
+export { SickLeave } from './Component'

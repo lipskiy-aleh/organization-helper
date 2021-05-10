@@ -1,12 +1,16 @@
 import { AnyAction } from 'redux'
 import { VacationInfoModel } from './models/vacationInfo.model'
-import { VacationHistoryItemModel } from './models/vacationHistoryItem.model'
+import { VacationHistoryItemModel} from './models/vacationHistoryItem.model'
 import { BackEndVacationsDataModel } from './models/backEndVacationsData.model'
-import { SET_VACATIONS_DATA } from './actions'
+import { OtherVacationsModel } from './models/otherVacations.model'
+import { SET_VACATIONS_DATA, ADD_REQUEST, ADD_DURATION } from './actions'
+
 export interface IVacationsReducer {
   regularVacation?: VacationInfoModel,
   sickVacation?: VacationInfoModel,
-  history: VacationHistoryItemModel[]
+  otherVacations?: OtherVacationsModel,
+  duration?: number,
+  history: VacationHistoryItemModel[],
 }
 
 const defaultSate: IVacationsReducer = {
@@ -21,7 +25,23 @@ export const vacationReducer = (state: IVacationsReducer = defaultSate, action: 
         ...state,
         ...data,
       }
-    } default:
+    }
+
+    case ADD_REQUEST: {
+      return {
+        ...state,
+        history: [...state.history, action.payload],
+      }
+    }
+
+    case ADD_DURATION: {
+      return {
+        ...state,
+        duration: action.duration,
+      }
+    }
+
+    default:
       return state
   }
 }

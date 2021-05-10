@@ -1,0 +1,1 @@
+export { RegularVacation } from './Component'

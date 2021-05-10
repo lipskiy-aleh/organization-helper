@@ -4,26 +4,42 @@ import {
   Router,
   Switch,
   Route,
-  Redirect,
 } from 'react-router-dom'
 import { store } from 'store'
 import { LoginPg } from './LoginPg'
 import { PrivateRoute } from './PrivateRoute'
 import { history } from 'app-history'
 import { Vacations } from 'modules/vacations'
-import { BASE_ROUTES, DEFAULT_ROUTE } from 'app-constants'
+import { BASE_ROUTES } from 'app-constants'
+import { routers } from './routers.service'
 
 import 'antd/dist/antd.css'
+import { Layout } from 'antd'
+import { StyledLayout } from './styles'
+import { Header } from './Header'
+import { Footer } from './Footer'
+
+const { Content } = Layout
 
 const App: React.FC = () => (
   <Provider store={store}>
     <Router history={history}>
-      <Switch>
-        <Route path="/" exact render={() => <Redirect to={DEFAULT_ROUTE} />} />
-        <Route path={BASE_ROUTES.LOGIN} component={LoginPg}/>
+      <StyledLayout>
+        <Header />
 
-        <PrivateRoute path={BASE_ROUTES.VACATIONS} component={Vacations} />
-      </Switch>
+        <Content style={{padding: '20px 50px 0'}}>
+          <Switch>
+            {routers.map(({path, isExact= false, component}) => (
+              <Route key={path} path={path} exact={isExact} component={component} />
+            ))}
+
+            <Route path={BASE_ROUTES.LOGIN} component={LoginPg}/>
+            <PrivateRoute path={BASE_ROUTES.VACATIONS} component={Vacations} />
+          </Switch>
+        </Content>
+
+        <Footer>Footer</Footer>
+      </StyledLayout>
     </Router>
   </Provider>
 )

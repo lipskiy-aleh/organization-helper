@@ -1,0 +1,1 @@
+export { VacationsHistory } from './Component'
