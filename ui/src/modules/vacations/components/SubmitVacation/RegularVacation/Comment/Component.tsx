@@ -5,8 +5,11 @@ const { TextArea } = Input
 
 export const Comment: React.FC = () => {
   return (
-    <Form.Item name="comment">
-      <TextArea rows={2} placeholder={'Add comment'}/>
-    </Form.Item>
+    <>
+      <h3>Comment</h3>
+      <Form.Item name="comment">
+        <TextArea rows={2} placeholder={'Add comment'}/>
+      </Form.Item>
+    </>
   )
 }

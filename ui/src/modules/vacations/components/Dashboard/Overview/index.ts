@@ -1,1 +1,1 @@
-export { Overview } from './Container'
+export { Overview } from './Component'

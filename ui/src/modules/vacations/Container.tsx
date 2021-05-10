@@ -13,7 +13,6 @@ export const Container:React.FC<RouteComponentProps> = ({ match }) => {
     dispatch(fetchVacations())
   }, [])
 
-
   return (
     <Switch>
       <Route path={match.url} exact component={VacationsHistory} />
